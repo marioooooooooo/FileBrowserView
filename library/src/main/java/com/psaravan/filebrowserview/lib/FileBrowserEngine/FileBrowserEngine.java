@@ -131,7 +131,7 @@ public class FileBrowserEngine {
 
                             //Check if the file ends with an excluded extension.
                             String[] splits = path.split(".");
-                            if (mFileBrowserView.getFileExtensionFilter()
+                            if (splits.length > 0 && mFileBrowserView.getFileExtensionFilter()
                                                 .getFilterMap()
                                                 .containsKey("." + splits[splits.length-1]))
                                 continue;
